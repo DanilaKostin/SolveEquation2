@@ -2,7 +2,7 @@ language: csharp
 solution: netTools.sln
 install:
   - nuget restore netTools.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.15.1 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release netTools.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe SolveEquationTests/bin/Release/netcoreapp3.1/SolveEquationTests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.15.1/tools/nunit3-console.exe SolveEquationTests/bin/Release/netcoreapp3.1/SolveEquationTests.dll
